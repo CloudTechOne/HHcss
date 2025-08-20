@@ -2,16 +2,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
 
 :root {
-  --header-bg: url("https://w2.chabad.org/media/images/1329/jEpV13291460.png");
+  --header-bg: url("https://jewishokc.com/media/images/1331/tnHT13314429.png");
   --appeal-bg: url("https://w2.chabad.org/media/images/1329/uPFI13291498.png");
   --primary-font: "Montserrat", Arial, sans-serif;
-  --primary-color: #e274ad;
-  --primary-color-hover: #d6609d;
-  --submit-color: #b6427c;
-  --appeal-bg-color: #e274ad;
-  --appeal-button-bg: #d0df8c;
-  --appeal-button-hover: #ece3c7;
-  --appeal-button-text: #000;
+  
+  /* High Holidays Color Theme */
+  --cal-poly-green: #1b4827;
+  --lion: #c29b72;
+  --dark-green: #163a24;
+  --kobicha: #6f3c1f;
+  --peach: #f8b68b;
+  
+  /* Applied Color Variables */
+  --primary-color: var(--cal-poly-green);
+  --primary-color-hover: var(--dark-green);
+  --submit-color: var(--kobicha);
+  --appeal-bg-color: var(--cal-poly-green);
+  --appeal-button-bg: var(--peach);
+  --appeal-button-hover: var(--lion);
+  --appeal-button-text: var(--dark-green);
 }
 
 .cco_templateless_template {
