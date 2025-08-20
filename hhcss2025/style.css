@@ -183,7 +183,7 @@ body.cco_templateless_page.mobile #navigation.chabad_navigator_bar #menu {
   padding: 50px 0px;
   background-position: center;
   background-size: cover;
-  color: black;
+  color: #333;
   font-family: var(--primary-font);
   display: flex;
   flex-direction: column;
