@@ -165,7 +165,9 @@ div#chabad_head .chabad_navigator_bar ul li a {
 
 .actions-container .action img {
   width: 140px;
-  height: auto;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 body.mobile #chabad_head .chabad_content_head,
