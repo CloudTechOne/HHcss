@@ -1,16 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap");
-
-/* ============================================
-   MODERN ELEGANT CHANUKAH THEME
-   For Simple HTML Structure (actions-container)
-   Color Palette: Navy, Gold, Cream, Silver
-   ============================================ */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 
 :root {
-  /* Chanukah Color Variables */
   --header-bg: url("https://jewishokc.com/media/images/1331/tnHT13314429.png");
   --appeal-bg: url("https://jewishokc.com/media/images/1331/ybpJ13314441.png");
+  --primary-font: "Inter", Arial, sans-serif;
+  --display-font: "Playfair Display", Georgia, serif;
   
+  /* Chanukah Color Theme - Modern Elegant */
   --navy-deep: #1a2b4a;
   --navy-medium: #2d4165;
   --navy-light: #3d5278;
@@ -18,14 +15,7 @@
   --gold-light: #f5e6c8;
   --gold-accent: #c9a227;
   --cream: #faf8f3;
-  --cream-dark: #f0ebe0;
   --silver: #c0c0c0;
-  --white: #ffffff;
-  --text-dark: #2c3e50;
-  --text-medium: #5a6c7d;
-  --shadow-soft: rgba(26, 43, 74, 0.12);
-  --shadow-medium: rgba(26, 43, 74, 0.2);
-  --shadow-strong: rgba(26, 43, 74, 0.3);
   
   /* Applied Color Variables */
   --primary-color: var(--navy-deep);
@@ -33,66 +23,21 @@
   --submit-color: var(--gold-rich);
   --appeal-bg-color: var(--navy-deep);
   --appeal-button-bg: var(--gold-rich);
-  --appeal-button-hover: var(--gold-light);
+  --appeal-button-hover: var(--gold-accent);
   --appeal-button-text: var(--navy-deep);
-  
-  /* Font Variables */
-  --primary-font: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  --display-font: "Playfair Display", Georgia, serif;
 }
-
-/* ============================================
-   GLOBAL STYLES
-   ============================================ */
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--primary-font);
-  color: var(--text-dark);
-  background-color: var(--cream);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* ============================================
-   TEMPLATE OVERRIDES
-   ============================================ */
 
 .cco_templateless_template {
   overflow: hidden;
   margin-top: -30px;
 }
 
-.cco_templateless_page #chabad_main_content {
-  background-image: inherit;
-  background-color: var(--cream);
-}
-
-div#content_page {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
-}
-
-/* ============================================
-   HEADER SECTION
-   ============================================ */
-
 .chabad_header {
-  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-medium) 100%);
   background-image: var(--header-bg);
-  background-position: center;
-  background-size: cover;
+  background-color: var(--navy-deep);
   background-blend-mode: overlay;
   height: auto;
-  padding: 60px 20px;
   position: relative;
-  overflow: hidden;
 }
 
 .chabad_header::before {
@@ -110,14 +55,11 @@ div#content_page {
 .chabad-header-inner {
   position: relative;
   z-index: 2;
-  text-align: center;
 }
 
 .chabad-header-inner img {
   width: 650px;
   height: auto;
-  max-width: 100%;
-  display: inline-block;
   filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
 }
@@ -133,26 +75,23 @@ div#content_page {
 }
 
 .cco_templateless_page .chabad_header {
-  padding: 40px 20px;
+  padding: 30px 0;
 }
 
-/* ============================================
-   NAVIGATION BAR
-   ============================================ */
-
 div#chabad_head .chabad_navigator_bar {
-  margin: 0 auto;
-  background: linear-gradient(135deg, var(--gold-rich) 0%, var(--gold-accent) 100%);
-  box-shadow: 0 2px 12px var(--shadow-soft);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  margin: 10px auto;
+  box-shadow: 0 2px 12px rgba(26, 43, 74, 0.15);
+}
+
+.cco_templateless_page #chabad_main_content {
+  background-image: inherit;
+  background-color: var(--cream);
 }
 
 body.mobile .chabad_navigator_bar #menu .item.heading,
 body.mobile #navigation.chabad_navigator_bar #menu li:not(.heading),
 div#chabad_head .chabad_navigator_bar {
-  background-color: var(--gold-rich);
+  background: linear-gradient(135deg, var(--gold-rich) 0%, var(--gold-accent) 100%);
 }
 
 body.mobile #navigation.chabad_navigator_bar #menu li .sub_menu_toggle {
@@ -163,12 +102,10 @@ body.mobile #navigation.chabad_navigator_bar #menu li .sub_menu_toggle {
 
 #navigation li.parent a.parent {
   background-color: inherit;
-  color: var(--white);
+  color: var(--navy-deep);
   margin-right: 5px;
   font-family: var(--primary-font);
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -186,7 +123,7 @@ body.mobile #navigation.chabad_navigator_bar #menu li .sub_menu_toggle {
 }
 
 #navigation li.parent a.parent:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.2);
   color: var(--navy-deep);
 }
 
@@ -207,48 +144,30 @@ div#chabad_head .chabad_navigator_bar ul li {
 }
 
 div#chabad_head .chabad_navigator_bar ul li a {
-  color: var(--white);
+  color: white;
   padding: 0px 24px;
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   font-family: var(--primary-font);
   transition: all 0.3s ease;
 }
 
+div#chabad_head .chabad_navigator_bar ul li a:hover {
+  color: var(--navy-deep);
+}
+
+.ct-header .ct-nav .ct-nav-inner .chabad_menu_content .navi .item.parent {
+  font-size: 0;
+}
+
 #navigation li.parent.selected a.parent {
   font-weight: 600;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.25);
   color: var(--navy-deep);
 }
-
-div#chabad_head .chabad_navigator_bar ul li .sub_menu .item {
-  background-color: var(--gold-rich);
-  transition: all 0.3s;
-}
-
-div#chabad_head .chabad_navigator_bar ul li .sub_menu .item:hover {
-  background-color: var(--gold-light);
-}
-
-div#chabad_head #navigation li.parent a.parent:hover + .sub_menu_toggle {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-div#chabad_head .chabad_navigator_bar ul li .sub_menu .item a {
-  color: var(--white);
-  border-right: none;
-}
-
-div#chabad_head .chabad_navigator_bar ul li .sub_menu .item a:hover {
-  color: var(--navy-deep);
-}
-
-/* ============================================
-   MAIN CONTENT AREA
-   ============================================ */
 
 .text-container {
   text-align: center;
@@ -256,9 +175,7 @@ div#chabad_head .chabad_navigator_bar ul li .sub_menu .item a:hover {
   font-size: 22px;
   line-height: 38px;
   padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  color: var(--text-dark);
+  color: var(--navy-deep);
 }
 
 .text-container p {
@@ -266,27 +183,13 @@ div#chabad_head .chabad_navigator_bar ul li .sub_menu .item a:hover {
   font-weight: 300;
 }
 
-/* ============================================
-   ACTIONS CONTAINER (CHANUKAH EVENTS)
-   ============================================ */
-
 .actions-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 5%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-}
-
-@media (max-width: 650px) {
-  .actions-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+  gap: 20px;
 }
 
 .actions-container .action {
@@ -294,8 +197,8 @@ div#chabad_head .chabad_navigator_bar ul li .sub_menu .item a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 280px;
+  margin: 20px 28px;
+  width: 250px;
   font-family: var(--primary-font);
   text-decoration: none;
   text-align: center;
@@ -303,17 +206,17 @@ div#chabad_head .chabad_navigator_bar ul li .sub_menu .item a:hover {
   position: relative;
   font-size: 17px;
   text-transform: uppercase;
-  background: var(--white);
-  border-radius: 16px;
+  background: white;
   padding: 25px 20px;
-  box-shadow: 0 4px 20px var(--shadow-soft);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(26, 43, 74, 0.12);
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
 
 .actions-container .action:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 32px var(--shadow-medium);
+  box-shadow: 0 8px 32px rgba(26, 43, 74, 0.2);
   border-color: var(--gold-rich);
 }
 
@@ -322,7 +225,6 @@ div#chabad_head .chabad_navigator_bar ul li .sub_menu .item a:hover {
   color: var(--navy-deep);
   margin-top: 15px;
   font-weight: 600;
-  letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
 
@@ -342,16 +244,17 @@ div#chabad_head .chabad_navigator_bar ul li .sub_menu .item a:hover {
 .actions-container .action img {
   width: 140px;
   height: 140px;
-  object-fit: contain;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: drop-shadow(0 4px 12px rgba(26, 43, 74, 0.15));
   transition: all 0.4s ease;
-  filter: drop-shadow(0 4px 12px var(--shadow-soft));
   animation: gentle-pulse 3s ease-in-out infinite;
 }
 
 @keyframes gentle-pulse {
   0%, 100% {
     transform: scale(1);
-    filter: drop-shadow(0 4px 12px var(--shadow-soft));
+    filter: drop-shadow(0 4px 12px rgba(26, 43, 74, 0.15));
   }
   50% {
     transform: scale(1.05);
@@ -363,10 +266,6 @@ div#chabad_head .chabad_navigator_bar ul li .sub_menu .item a:hover {
   transform: scale(1.1) rotate(5deg);
   filter: drop-shadow(0 8px 24px rgba(212, 175, 55, 0.6));
 }
-
-/* ============================================
-   APPEAL CONTAINER (SIDEBAR)
-   ============================================ */
 
 body.mobile #chabad_head .chabad_content_head,
 body.mobile #chabad_head > .chabad_header {
@@ -380,11 +279,11 @@ body.cco_templateless_page.mobile #navigation.chabad_navigator_bar #menu {
 .appeal-container {
   background-image: var(--appeal-bg);
   background-color: var(--appeal-bg-color);
+  background-blend-mode: overlay;
   padding: 50px 30px;
   background-position: center;
   background-size: cover;
-  background-blend-mode: overlay;
-  color: var(--white);
+  color: white;
   font-family: var(--primary-font);
   display: flex;
   flex-direction: column;
@@ -394,7 +293,7 @@ body.cco_templateless_page.mobile #navigation.chabad_navigator_bar #menu {
   width: 100%;
   font-size: 17px;
   border-radius: 16px;
-  box-shadow: 0 8px 32px var(--shadow-medium);
+  box-shadow: 0 8px 32px rgba(26, 43, 74, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -456,20 +355,23 @@ body.cco_templateless_page.mobile #navigation.chabad_navigator_bar #menu {
   font-family: var(--primary-font);
   line-height: 1.7;
   font-weight: 300;
-  color: var(--white);
+  color: white;
 }
 
-/* ============================================
-   FORM ELEMENTS
-   ============================================ */
+div#content_page {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
 
 .form-submit-button {
   background: var(--gold-rich) !important;
-  color: var(--white) !important;
+  color: white !important;
   border: 2px solid var(--navy-deep) !important;
   padding: 15px 35px !important;
   font-size: 20px !important;
-  box-shadow: 0 4px 16px var(--shadow-soft) !important;
+  box-shadow: 0 4px 16px rgba(26, 43, 74, 0.15) !important;
   text-shadow: none;
   border-radius: 50px;
   font-family: var(--primary-font);
@@ -482,33 +384,28 @@ body.cco_templateless_page.mobile #navigation.chabad_navigator_bar #menu {
 .form-submit-button:hover {
   background: var(--gold-accent) !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px var(--shadow-medium) !important;
+  box-shadow: 0 6px 24px rgba(26, 43, 74, 0.2) !important;
 }
 
 img.form-image {
   width: 70% !important;
   border-radius: 12px;
-  box-shadow: 0 4px 16px var(--shadow-soft);
+  box-shadow: 0 4px 16px rgba(26, 43, 74, 0.15);
 }
 
 .clearfix.bh.mobile-only.align_right {
   top: 0 !important;
 }
 
-/* ============================================
-   CAMPAIGN PROGRESS (OPTIONAL)
-   ============================================ */
-
 .campaign-progress {
   padding: 2rem;
   width: 100%;
   max-width: 760px;
   text-align: center;
-  margin: 0 auto;
-  background: var(--white);
+  margin: 0 auto 40px;
+  background: white;
   border-radius: 16px;
-  box-shadow: 0 4px 20px var(--shadow-soft);
-  margin-bottom: 40px;
+  box-shadow: 0 4px 20px rgba(26, 43, 74, 0.12);
 }
 
 @media (max-width: 768px) {
@@ -528,7 +425,7 @@ img.form-image {
 
 .progress-bar-container {
   width: 100%;
-  background-color: var(--cream-dark);
+  background-color: var(--cream);
   border: 3px solid var(--gold-rich);
   border-radius: 50rem;
   overflow: hidden;
@@ -546,16 +443,12 @@ img.form-image {
 }
 
 .progress-bar .percent {
-  color: var(--white);
+  color: white;
   font-size: 14px;
   font-weight: 700;
   margin-right: 10px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-
-/* ============================================
-   DONORS DISPLAY (OPTIONAL)
-   ============================================ */
 
 #latest-donors-wrapper {
   position: relative;
@@ -583,16 +476,16 @@ img.form-image {
   padding: 20px;
   transition: transform 0.3s ease;
   text-align: center;
-  background: var(--white);
+  background: white;
   color: var(--navy-deep);
   font-size: 15px;
-  box-shadow: 0 4px 16px var(--shadow-soft);
+  box-shadow: 0 4px 16px rgba(26, 43, 74, 0.12);
   border: 2px solid var(--gold-rich);
 }
 
 .donor-wrap:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 24px var(--shadow-medium);
+  box-shadow: 0 6px 24px rgba(26, 43, 74, 0.2);
 }
 
 .donor-wrap:first-child {
@@ -672,7 +565,7 @@ img.form-image {
 .dedication-text {
   font-family: var(--primary-font);
   font-size: 13px;
-  color: var(--text-medium);
+  color: #5a6c7d;
   margin-top: 10px;
 }
 
@@ -684,12 +577,33 @@ img.form-image {
   font-weight: 700;
   color: var(--navy-deep);
   text-transform: uppercase;
+  border-bottom: 3px solid var(--gold-rich);
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
-/* ============================================
-   RESPONSIVE ADJUSTMENTS
-   ============================================ */
+div#chabad_head .chabad_navigator_bar ul li .sub_menu .item {
+  background-color: var(--gold-rich);
+  transition: all 0.3s;
+}
 
+div#chabad_head .chabad_navigator_bar ul li .sub_menu .item:hover {
+  background-color: var(--gold-light);
+}
+
+div#chabad_head #navigation li.parent a.parent:hover + .sub_menu_toggle {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+div#chabad_head .chabad_navigator_bar ul li .sub_menu .item a {
+  color: white;
+}
+
+div#chabad_head .chabad_navigator_bar ul li .sub_menu .item a:hover {
+  color: var(--navy-deep);
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .text-container {
     font-size: 18px;
@@ -698,7 +612,11 @@ img.form-image {
   }
   
   .actions-container {
-    padding: 15px;
+    gap: 15px;
+  }
+  
+  .actions-container .action {
+    margin: 10px;
   }
   
   .appeal-header {
@@ -708,16 +626,11 @@ img.form-image {
   .appeal-text {
     font-size: 15px;
   }
-  
-  .appeal-button-container a {
-    padding: 14px 30px;
-    font-size: 14px;
-  }
 }
 
 @media (max-width: 480px) {
   .chabad_header {
-    padding: 30px 15px;
+    padding: 20px 10px;
   }
   
   .text-container {
@@ -726,7 +639,8 @@ img.form-image {
   }
   
   .actions-container .action {
-    max-width: 100%;
+    width: 100%;
+    max-width: 300px;
   }
   
   .actions-container .action img {
@@ -734,33 +648,3 @@ img.form-image {
     height: 120px;
   }
 }
-
-/* ============================================
-   UTILITY & ACCESSIBILITY
-   ============================================ */
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus visible for accessibility */
-*:focus-visible {
-  outline: 3px solid var(--gold-rich);
-  outline-offset: 2px;
-}
-
-/* ============================================
-   END OF CHANUKAH STYLESHEET
-   ============================================ */
